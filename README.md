@@ -7,6 +7,7 @@ ant compile
 ant run -Dargs=""
 ```
 In -Dargs you can write a sequence of numbers from the numbers 1 2 3 4.
+Each number corresponds to a different level.
 Examples:
  ```sh
 ant run -Dargs="1 2 3 4"

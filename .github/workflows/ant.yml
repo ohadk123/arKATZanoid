@@ -15,13 +15,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Set up JDK 11
       uses: actions/setup-java@v3
       with:
-        java-version: '13'
+        java-version: '17'
         distribution: 'temurin'
-    - name: Build with Ant
+    - name: Compile with Ant
       run: ant compile
     - name: Run with Ant
-      run: ant run -Dargs="1 2 3 4"
+      run: ant run -Dargs="1"

@@ -25,3 +25,5 @@ jobs:
       run: ant compile
     - name: Run with Ant
       run: ant run -Dargs="1"
+      env:
+       DISPLAY: :1

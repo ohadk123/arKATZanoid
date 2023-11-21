@@ -21,6 +21,12 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
+    - name: Set up virtual X11
+      run: sudo apt-get install xvfb
+    - name: Start virtual frame buffer
+      run: Xvfb :19 -screen 0 1024x768x16 &
+    - name: set display
+      run: export DISPLAY=:19
     - name: Compile with Ant
       run: ant compile
     - name: Run with Ant
